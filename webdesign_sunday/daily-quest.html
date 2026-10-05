@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quest | Dragon Champions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+
+    </a>
+
+    <nav>
+        <a href="profile.html">Profile</a>
+        <a href="index.html">Home</a>
+        <a href="daily-quest.html" class="active">Daily Quest</a>
+        <a href="#">Rewards</a>
+        <a href="#">Calendar</a>
+    </nav>
+</header>
+
+<main>
+    <section class="page-heading">
+        <h1>Daily Quests</h1>
+        <p>Check off your daily goals as you complete them.</p>
+    </section>
+
+    <section class="quest-list">
+
+        <label class="quest-circle">
+            <input type="checkbox">
+            <h2>Study</h2>
+            <p>Study for 20 minutes</p>
+            <strong>+100 XP</strong>
+        </label>
+
+        <label class="quest-circle">
+            <input type="checkbox">
+            <h2>Clean Up</h2>
+            <p>Clean and organize your space</p>
+            <strong>+75 XP</strong>
+        </label>
+
+        <label class="quest-circle">
+            <input type="checkbox">
+            <h2>Hydrate</h2>
+            <p>Remember to drink water</p>
+            <strong>+50 XP</strong>
+        </label>
+
+    </section>
+
+    <section class="panel quest-controls">
+        <h2>Manage Quests</h2>
+        <p>Add or remove quests from your daily list.</p>
+
+        <div class="quest-form">
+            <label for="quest-name">Quest Name</label>
+            <input type="text" id="quest-name" name="quest-name"
+                   placeholder="Enter a new quest">
+
+            <label for="quest-xp">XP</label>
+            <input type="number" id="quest-xp" name="quest-xp"
+                   placeholder="100">
+
+            <button type="button" class="quest-button add-button">+ Add Quest</button>
+            <button type="button" class="quest-button delete-button">− Delete Quest</button>
+        </div>
+
+        <p</p>
+    </section>
+
+    <section class="panel bonus">
+        <h2>Daily Bonus</h2>
+        <p>Complete all your quests to earn points.</p>
+    </section>
+</main>
+
+<footer>
+    <p>Contact Us | Social Media | &copy; 2026 Dragon Champions</p>
+</footer>
+
+</body>
+</html>
