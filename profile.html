@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile | Dragon Champions</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <a href="index.html">
-
-    </a>
-
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="profile.html">Profile</a>
+<nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html" class="active" aria-current="page">Profile</a>
         <a href="daily-quest.html">Daily Quest</a>
         <a href="#">Rewards</a>
-        <a href="#">Contact Us </a>
+        <a href="#">Contact Us</a>
     </nav>
 </header>
 
 <main>
     <section class="profile-hero">
     <div class="profile-preview">
-        <img src="images/avatar1.png" alt="My Avatar">
+        <img id="avatar-preview" src="images/avatar1.png" alt="My Avatar">
         <p>My Avatar</p>
     </div>
 
@@ -35,7 +34,7 @@
     </div>
 
     <div class="profile-preview">
-        <img src="images/dragon1.png" alt="My Guardian Dragon">
+        <img id="dragon-preview" src="images/dragon1.png" alt="My Guardian Dragon">
         <p>My Guardian Dragon</p>
     </div>
 </section>
@@ -48,21 +47,25 @@
                 <label class="picture-choice selectable-choice">
                     <input type="radio" name="avatar" checked>
                     <img src="images/avatar1.png" alt="Avatar option 1">
+                    <span class="choice-caption">Avatar 1</span>
                 </label>
 
                 <label class="picture-choice selectable-choice">
                     <input type="radio" name="avatar">
                     <img src="images/avatar2.png" alt="Avatar option 2">
+                    <span class="choice-caption">Avatar 2</span>
                 </label>
 
                 <label class="picture-choice selectable-choice">
                     <input type="radio" name="avatar">
                     <img src="images/avatar3.png" alt="Avatar option 3">
+                    <span class="choice-caption">Avatar 3</span>
                 </label>
 
                 <label class="picture-choice selectable-choice">
                     <input type="radio" name="avatar">
                     <img src="images/avatar4.png" alt="Avatar option 4">
+                    <span class="choice-caption">Avatar 4</span>
                 </label>
 
             </div>
@@ -75,21 +78,25 @@
                 <label class="picture-choice selectable-choice">
                     <input type="radio" name="dragon" checked>
                     <img src="images/dragon1.png" alt="Dragon option 1">
+                    <span class="choice-caption">Dragon 1</span>
                 </label>
 
                 <label class="picture-choice selectable-choice">
                     <input type="radio" name="dragon">
                     <img src="images/dragon2.png" alt="Dragon option 2">
+                    <span class="choice-caption">Dragon 2</span>
                 </label>
 
                 <label class="picture-choice selectable-choice">
                     <input type="radio" name="dragon">
                     <img src="images/dragon3.png" alt="Dragon option 3">
+                    <span class="choice-caption">Dragon 3</span>
                 </label>
 
                 <label class="picture-choice selectable-choice">
                     <input type="radio" name="dragon">
                     <img src="images/dragon4.png" alt="Dragon option 4">
+                    <span class="choice-caption">Dragon 4</span>
                 </label>
 
             </div>
@@ -97,10 +104,10 @@
     </section>
 
     <section class="profile-stats">
-        <div class="stat-card"><h3>Level 1</h3><p>Champion Level</p></div>
-        <div class="stat-card"><h3>7 Days</h3><p>Quest Streak</p></div>
-        <div class="stat-card"><h3>18</h3><p>Quests Complete</p></div>
-        <div class="stat-card"><h3>5</h3><p>Badges</p></div>
+        <div class="stat-card"><h3 id="champion-level">Level 1</h3><p>Champion Level</p></div>
+        <div class="stat-card"><h3>Coming Soon</h3><p>Quest Streak</p></div>
+        <div class="stat-card"><h3 id="quest-completed">0</h3><p>Quests Complete</p></div>
+        <div class="stat-card"><h3>Coming Soon</h3><p>Badges</p></div>
     </section>
 </main>
 
@@ -108,5 +115,6 @@
     <p>Contact Us | Social Media | &copy; 2026 Dragon Champions</p>
 </footer>
 
+<script src="script.js" defer></script>
 </body>
 </html>

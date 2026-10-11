@@ -1109,3 +1109,66 @@ body {
         margin-top: 5px;
     }
 }
+
+/* Teacher feedback: modern fonts, readable cards, seamless background */
+html { min-height: 100%; background: #071A3D; }
+body {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 18% 35%, rgba(23,63,138,.75), transparent 55%),
+                radial-gradient(ellipse at 85% 75%, rgba(112,47,138,.65), transparent 55%),
+                linear-gradient(135deg, #071A3D, #15164D 55%, #29185F);
+    background-attachment: fixed;
+    font-size: 16px;
+    line-height: 1.5;
+}
+h1, h2, h3, .site-title, nav a { font-family: 'Chakra Petch', Arial, sans-serif; }
+h1, h2, h3, .site-title { font-weight: 700; }
+.home-page .cards {
+    width: 100%; max-width: 1100px;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;
+}
+.home-page .card {
+    width: 100%; max-width: none; height: auto; min-height: 250px;
+    border-radius: 28px; padding: 30px 24px;
+}
+.home-page .card h2 { font-size: 25px; line-height: 1.2; }
+.home-page .card p { font-size: 17px; line-height: 1.5; max-width: 28ch; }
+.home-page .card a { color: #8BE9FD; }
+.quest-circle p { font-size: 16px; line-height: 1.45; }
+.quest-circle h2 { font-size: 25px; }
+@media (max-width: 899px) {
+    .home-page .cards { grid-template-columns: 1fr; max-width: 540px; gap: 20px; }
+    .home-page .card { min-height: 0; padding: 26px 28px; }
+}
+@media (max-width: 599px) {
+    .home-page .cards { max-width: 100%; }
+    .home-page .card { width: 100%; height: auto; border-radius: 24px; padding: 25px 22px; }
+    .home-page .card p { font-size: 17px; }
+}
+
+
+/* Keep all three Home feature cards the same size */
+.home-page .cards {
+    align-items: stretch;
+}
+.home-page .card {
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 285px;
+}
+@media (max-width: 899px) {
+    .home-page .card {
+        min-height: 245px;
+    }
+}
+
+/* JavaScript-powered quest cards: preserve original circular styling */
+.interactive-quest { display:flex; flex-direction:column; justify-content:center; align-items:center; padding:16px; box-sizing:border-box; }
+.interactive-quest label { display:flex; flex-direction:column; justify-content:center; align-items:center; cursor:pointer; flex:1; width:100%; }
+.interactive-quest .remove-quest { background:transparent; color:#8BE9FD; border:1px solid #8BE9FD; border-radius:12px; padding:4px 14px; cursor:pointer; margin-top:8px; font:inherit; font-size:13px; }
+.interactive-quest .remove-quest:hover { background:#233d83; }
+#quest-message, #xp-total { font-size:17px; color:#8BE9FD; font-weight:600; }
+@media(max-width:599px) { .interactive-quest { min-width:220px; } }
+
+/* Midterm: captions make the Profile image gallery easier to understand. */
+.choice-caption { display: block; margin-top: 5px; color: #d5d2ff; font-size: 14px; font-weight: 600; text-align: center; }
