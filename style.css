@@ -1172,3 +1172,24 @@ h1, h2, h3, .site-title { font-weight: 700; }
 
 /* Midterm: captions make the Profile image gallery easier to understand. */
 .choice-caption { display: block; margin-top: 5px; color: #d5d2ff; font-size: 14px; font-weight: 600; text-align: center; }
+
+
+/* ABOUT PAGE: uses the same colors and typography as the other pages */
+.about-page { padding-bottom: 50px; }
+.about-hero { display: grid; grid-template-columns: minmax(180px, 310px) 1fr; align-items: center; gap: 38px; padding: 35px 20px 45px; }
+.about-logo { width: 100%; max-width: 310px; height: auto; }
+.about-hero h1 { font-size: clamp(30px, 4vw, 48px); margin: 0 0 12px; }
+.about-hero p { max-width: 65ch; font-size: 17px; line-height: 1.7; }
+.about-tagline { color: #8BE9FD; font-family: 'Chakra Petch', Arial, sans-serif; font-size: 22px !important; font-weight: 700; }
+.about-how > h2 { text-align: center; margin: 10px 0 24px; font-size: 30px; }
+.about-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.about-feature { background: #253D8F; border: 2px solid #B8B5FF; border-radius: 28px; padding: 28px 23px; text-align: center; }
+.about-feature h3 { color: #D5CFFF; font-size: 23px; margin: 10px 0; }
+.about-feature p { font-size: 16px; line-height: 1.6; margin: 0; }
+.about-symbol { display: inline-flex; justify-content: center; align-items: center; width: 60px; height: 60px; border-radius: 50%; background: #8BE9FD; color: #172554; font-size: 30px; font-weight: bold; }
+.about-cta { text-align: center; padding: 40px 22px; margin: 36px auto 0; background: rgba(37, 61, 143, .55); border: 1px solid #B8B5FF; border-radius: 26px; }
+.about-cta h2 { margin-top: 0; }
+.about-cta p { margin-bottom: 26px; }
+.about-cta .button { display: inline-block; text-decoration: none; }
+@media (max-width: 899px) { .about-grid { grid-template-columns: 1fr; max-width: 580px; margin: auto; } }
+@media (max-width: 650px) { .about-hero { grid-template-columns: 1fr; text-align: center; gap: 0; padding: 18px 0 30px; } .about-logo { max-width: 220px; margin: auto; } .about-hero p { margin-left: auto; margin-right: auto; } .about-feature { padding: 24px; } }
