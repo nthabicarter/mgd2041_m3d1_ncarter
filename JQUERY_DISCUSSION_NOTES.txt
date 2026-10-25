@@ -1,0 +1,19 @@
+jQuery practice addition for the discussion assignment
+
+Modified files: about.html and style.css only.
+Original script.js, images, and other HTML pages were not changed.
+
+How to test:
+1. Open about.html in a browser with an internet connection (jQuery is loaded from code.jquery.com).
+2. Scroll to the "Want to Learn More?" section.
+3. Click "Show More Info" to reveal text with a sliding animation.
+4. Click "Hide More Info" to collapse the text.
+
+How it works:
+- The jQuery library is loaded with a script tag.
+- $(document).ready(...) waits for the page to load.
+- .click(...) responds to the button click.
+- .slideToggle() slides the extra paragraph open or closed.
+- aria-expanded and the button label update to reflect the current state.
+
+Important: Test this yourself and describe your actual experience in your discussion post.
