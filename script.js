@@ -37,6 +37,8 @@ function getEarnedXP() {
   return total;
 }
 
+
+
 function showQuests() {
   var list = document.getElementById('quest-list');
   if (!list) return;
@@ -179,3 +181,38 @@ function startWebsite() {
 }
 
 startWebsite();
+
+
+
+if (typeof jQuery !== 'undefined') {
+  jQuery(function ($) {
+    var dragon = $('#dragonLogo');
+    if (dragon.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      function floatDragon() {
+        dragon.animate({ top: '-15px' }, 1200)
+              .animate({ top: '0px' }, 1200, floatDragon);
+      }
+      floatDragon();
+    }
+  });
+}
+
+
+if (typeof jQuery !== 'undefined') {
+  jQuery(function ($) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    function floatProfileImage(selector, distance, speed) {
+      var picture = $(selector);
+      if (!picture.length) return;
+      function floatAgain() {
+        picture.animate({ top: -distance + 'px' }, speed)
+               .animate({ top: '0px' }, speed, floatAgain);
+      }
+      floatAgain();
+    }
+
+    floatProfileImage('#avatar-preview', 10, 1400);
+    floatProfileImage('#dragon-preview', 14, 1700);
+  });
+}

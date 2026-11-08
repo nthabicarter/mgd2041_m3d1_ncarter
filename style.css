@@ -131,7 +131,7 @@ h2 {
     margin-bottom: 5px;
 }
 
-/* PROFILE PAGE */
+
 
 .profile-choices {
     display: grid;
@@ -1103,12 +1103,18 @@ body {
     }
 }
 
-html { min-height: 100%; background: #071A3D; }
+/* One continuous galaxy background across all pages and screen heights.
+   Fixed layers avoid visible horizontal seams when content sections change. */
+html { min-height: 100%; background-color: #071A3D; }
 body {
     min-height: 100vh;
-    background: radial-gradient(ellipse at 18% 35%, rgba(23,63,138,.75), transparent 55%),
-                radial-gradient(ellipse at 85% 75%, rgba(112,47,138,.65), transparent 55%),
-                linear-gradient(135deg, #071A3D, #15164D 55%, #29185F);
+    background-color: #071A3D;
+    background-image:
+        radial-gradient(ellipse 75% 90% at 15% 25%, rgba(23, 63, 138, 0.52) 0%, transparent 75%),
+        radial-gradient(ellipse 80% 95% at 85% 80%, rgba(112, 47, 138, 0.43) 0%, transparent 78%),
+        linear-gradient(135deg, #071A3D 0%, #15164D 55%, #29185F 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     font-size: 16px;
     line-height: 1.5;
@@ -1194,7 +1200,7 @@ h1, h2, h3, .site-title { font-weight: 700; }
 .about-text-link { color: #8BE9FD; font-weight: bold; }
 @media (max-width: 700px) { .about-hero { grid-template-columns: 1fr; text-align: center; gap: 10px; margin-top: 10px; } .about-logo { max-width: 190px; } .about-hero p:not(.about-eyebrow):not(.about-tagline) { margin-left: auto; margin-right: auto; } .about-grid { grid-template-columns: 1fr; } .about-feature { padding: 24px; } }
 
-/* jQuery practice section on the About page */
+
 .jquery-info {
     max-width: 750px;
     margin: 35px auto 0;
@@ -1207,3 +1213,26 @@ h1, h2, h3, .site-title { font-weight: 700; }
 .jquery-info h2 { margin-top: 0; }
 .jquery-info #more-info-text p { line-height: 1.6; }
 .jquery-info button { cursor: pointer; }
+
+
+#dragonLogo {
+    position: relative;
+}
+
+
+#avatar-preview, #dragon-preview {
+    position: relative;
+}
+
+
+.intro-video-section { max-width: 900px; margin: 2rem auto; padding: 1.5rem; text-align: center; background: rgba(20, 24, 72, 0.55); border: 1px solid rgba(137, 215, 255, 0.24); border-radius: 20px; }
+.intro-video-section h2 { margin-bottom: 0.6rem; }
+.intro-video { display: block; width: 100%; max-width: 760px; height: auto; margin: 1.2rem auto 0.5rem; border-radius: 14px; background: #121637; }
+.intro-video-caption { font-size: 0.85rem; opacity: 0.8; }
+
+
+.about-logo-video { display:block; width:100%; max-width:310px; aspect-ratio: 1 / 1; object-fit:contain; margin:auto; border-radius:16px; background:#101738; filter:drop-shadow(0 8px 25px rgba(104,175,255,.25)); }
+@media (max-width:700px) { .about-logo-video { max-width:190px; } }
+
+
+.about-logo-video { aspect-ratio: 16 / 9; height: auto; object-fit: cover; background: transparent; border-radius: 12px; }
