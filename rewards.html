@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rewards | Dragon Champions</title>
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css?v=20261108">
+</head>
+
+<body>
+
+
+<header class="site-header">
+
+    <h1 class="site-title">Dragon Champions</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="daily-quest.html">Daily Quest</a>
+        <a href="rewards.html" class="active" aria-current="page">Rewards</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+</header>
+
+
+<main class="rewards-page">
+
+
+    <section class="page-heading">
+
+        <h1>Champion Rewards</h1>
+
+        <p>
+            Every quest brings you closer to your next achievement!
+        </p>
+
+    </section>
+
+
+    <section class="rewards-grid" aria-label="Your progress">
+
+
+        <div class="reward-panel">
+
+            <div class="reward-symbol" aria-hidden="true">✦</div>
+
+            <h2>Total XP</h2>
+
+            <p class="reward-number" id="reward-xp">0</p>
+
+            <p>Points earned from completed quests</p>
+
+        </div>
+
+
+        <div class="reward-panel">
+
+            <div class="reward-symbol" aria-hidden="true">✓</div>
+
+            <h2>Quests Completed</h2>
+
+            <p class="reward-number" id="reward-completed">0</p>
+
+            <p>Keep building your streak of accomplishments</p>
+
+        </div>
+
+        <div class="reward-panel badge-panel">
+
+            <div class="achievement-badge"
+                 id="achievement-badge"
+                 aria-hidden="true">
+                ★
+            </div>
+
+            <h2 id="badge-title">First Quest Badge</h2>
+
+            <p id="badge-message" aria-live="polite">
+                Complete your first quest to unlock this badge!
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="reward-next">
+
+        <h2>Your next adventure awaits</h2>
+
+        <p>
+            Visit Daily Quest, complete a goal,
+            and come back to see your progress.
+        </p>
+
+        <a class="button" href="daily-quest.html">
+            Go to Daily Quests →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>&copy; 2026 Dragon Champions</p>
+</footer>
+
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
