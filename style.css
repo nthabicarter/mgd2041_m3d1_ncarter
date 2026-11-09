@@ -1103,8 +1103,7 @@ body {
     }
 }
 
-/* One continuous galaxy background across all pages and screen heights.
-   Fixed layers avoid visible horizontal seams when content sections change. */
+
 html { min-height: 100%; background-color: #071A3D; }
 body {
     min-height: 100vh;
@@ -1236,3 +1235,57 @@ h1, h2, h3, .site-title { font-weight: 700; }
 
 
 .about-logo-video { aspect-ratio: 16 / 9; height: auto; object-fit: cover; background: transparent; border-radius: 12px; }
+
+
+.home-intro .button {
+    display: inline-block;
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+}
+.home-intro .button:hover,
+.home-intro .button:focus-visible {
+    transform: translateY(-7px) scale(1.08);
+    background-color: #ffffff;
+    box-shadow: 0 12px 28px rgba(75, 205, 255, 0.55);
+}
+
+
+@keyframes welcomeFadeIn {
+    0% { opacity: 0; transform: translateY(35px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.home-intro h2 {
+    animation: welcomeFadeIn 2.2s ease-out both;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .home-intro .button { transition: none; }
+    .home-intro .button:hover,
+    .home-intro .button:focus-visible { transform: none; }
+    .home-intro h2 { animation: none; }
+}
+
+
+.rewards-page,.contact-page {max-width:1100px;margin:0 auto;padding:24px 20px 60px;}
+.rewards-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:30px auto;}
+.reward-panel,.contact-panel,.reward-next {background:#253D8F;border:2px solid #B8B5FF;border-radius:26px;padding:30px;text-align:center;}
+.reward-panel h2,.reward-next h2,.contact-panel h2 {color:#e1d9ff;}
+.reward-symbol {font-size:38px;color:#8be9fd;}
+.reward-number {font:700 clamp(38px,5vw,62px) 'Chakra Petch',sans-serif;color:#8be9fd;margin:12px 0;}
+.achievement-badge {display:grid;place-items:center;width:108px;height:108px;margin:0 auto 14px;border-radius:50%;border:4px solid #aaa6c4;background:#182958;color:#aaa6c4;font-size:64px;transition:transform .4s ease,box-shadow .4s ease;}
+.achievement-badge.unlocked {border-color:#8be9fd;color:#ffe18c;background:#473d89;box-shadow:0 0 24px rgba(139,233,253,.55);animation:badgeCelebrate 1.5s ease-in-out infinite;}
+@keyframes badgeCelebrate {0%,100% {transform:scale(1) rotate(-5deg);}50% {transform:scale(1.12) rotate(5deg);}}
+.reward-next {max-width:760px;margin:25px auto;}
+.reward-next .button {display:inline-block;margin-top:15px;transition:transform .35s ease,box-shadow .35s ease,background-color .35s ease;}
+.reward-next .button:hover,.reward-next .button:focus-visible {transform:translateY(-7px) scale(1.05);background-color:white;box-shadow:0 12px 28px rgba(75,205,255,.55);}
+.contact-panel {max-width:680px;margin:24px auto;text-align:left;}
+.contact-panel>h2,.contact-panel>p {text-align:center;}
+#contact-form {display:grid;gap:10px;}
+#contact-form label {font-weight:bold;margin-top:8px;}
+#contact-form input,#contact-form textarea {width:100%;box-sizing:border-box;border:2px solid #b8b5ff;border-radius:10px;padding:12px;font:inherit;color:#172251;background:#fff;}
+#contact-form .button {justify-self:start;border:0;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;}
+#contact-form .button:hover,#contact-form .button:focus-visible {transform:translateY(-4px);box-shadow:0 9px 22px rgba(75,205,255,.5);}
+.contact-note {font-size:14px;opacity:.85;}
+@media(max-width:800px){.rewards-grid{grid-template-columns:1fr;}.reward-panel{padding:24px;}}
+@media(prefers-reduced-motion:reduce){.achievement-badge.unlocked{animation:none;}.achievement-badge,.reward-next .button,#contact-form .button{transition:none;}.reward-next .button:hover,.reward-next .button:focus-visible,#contact-form .button:hover,#contact-form .button:focus-visible{transform:none;}}
+

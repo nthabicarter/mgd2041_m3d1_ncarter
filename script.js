@@ -216,3 +216,28 @@ if (typeof jQuery !== 'undefined') {
     floatProfileImage('#dragon-preview', 14, 1700);
   });
 }
+
+// Rewards page: reads the same saved quests as Daily Quest.
+function showRewards() {
+  var xpElement = document.getElementById('reward-xp');
+  if (!xpElement) return;
+  var completed = quests.filter(function (quest) { return quest.done; }).length;
+  var bonus = quests.length > 0 && completed === quests.length ? 250 : 0;
+  xpElement.textContent = getEarnedXP() + bonus;
+  document.getElementById('reward-completed').textContent = completed;
+  if (completed > 0) {
+    document.getElementById('achievement-badge').classList.add('unlocked');
+    document.getElementById('badge-title').textContent = 'First Quest Unlocked!';
+    document.getElementById('badge-message').textContent = 'You completed your first quest. Keep going, Champion!';
+  }
+}
+showRewards();
+
+// Demo contact form: no recipient configured, so don't pretend a message was sent.
+var contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    document.getElementById('contact-status').textContent = 'Demo only: A contact email address needs to be configured before messages can be sent.';
+  });
+}
